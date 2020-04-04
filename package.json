@@ -1,0 +1,23 @@
+{
+  "name": "fork-recipes",
+  "version": "1.0.0",
+  "description": "Search over 1,000,000 recipes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtanasVihrogonov/Fork-recipes.git"
+  },
+  "author": "Atanas Vihrogonov <Vihrogonov@protonmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AtanasVihrogonov/Fork-recipes/issues"
+  },
+  "homepage": "https://github.com/AtanasVihrogonov/Fork-recipes#readme",
+  "devDependencies": {
+    "webpack": "^4.42.1"
+  },
+  "dependencies": {}
+}
