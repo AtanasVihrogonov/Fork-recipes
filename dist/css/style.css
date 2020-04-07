@@ -108,7 +108,7 @@ body {
 }
 
 .btn-inline {
-  color: #f59a83;
+  color: #004488;
   font-size: 1.2rem;
   border: none;
   background-color: #f9f5f3;
@@ -132,7 +132,7 @@ body {
 }
 
 .btn-inline:hover {
-  color: #f48982;
+  color: #003a74; 
   background-color: #f2efee;
 }
 
