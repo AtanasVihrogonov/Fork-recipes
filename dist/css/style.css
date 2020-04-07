@@ -202,7 +202,7 @@ body {
 .loader svg {
   height: 5.5rem;
   width: 5.5rem;
-  fill: #f59a83;
+  fill: #87cefa;
   transform-origin: 44% 50%;
   animation: rotate 1.5s infinite linear;
 }
@@ -375,7 +375,7 @@ body {
 .results__name,
 .likes__name {
   font-size: 1.3rem;
-  color: #87cefa;
+  color: #004488;
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 0.3rem;
