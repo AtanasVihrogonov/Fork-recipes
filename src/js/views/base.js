@@ -3,7 +3,8 @@ export const elements = {
   searchInput: document.querySelector('.search__field'),
   searchRes: document.querySelector('.results'),
   searchResultList: document.querySelector('.results__list'),
-  searchResultPages: document.querySelector('.results__pages')
+  searchResultPages: document.querySelector('.results__pages'),
+  recipe: document.querySelector('.recipe')
 };
 
 export const elementStrings = {
@@ -12,11 +13,11 @@ export const elementStrings = {
 
 export const renderLoader = parent => {
   const loader = `
-    <div class="${elementStrings.loader}">
-      <svg>
-        <use href="img/icons.svg#icon-cw"></use>
-      </svg>
-    </div>
+      <div class="${elementStrings.loader}">
+          <svg>
+              <use href="img/icons.svg#icon-cw"></use>
+          </svg>
+      </div>
   `;
   parent.insertAdjacentHTML('afterbegin', loader);
 };
