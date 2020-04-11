@@ -117,3 +117,14 @@ export const renderRecipe = (recipe, isLiked = false) => {
   `;
   elements.recipe.insertAdjacentHTML('afterbegin', markup);
 };
+
+export const updateSearvingsIngredients = recipe => {
+  // Updete searvings
+  document.querySelector('.recipe__info-data--people').textContent = recipe.servings;
+
+  // Update Ingredients
+  const countElements = Array.from(document.querySelectorAll('.recipe__count'));
+  countElements.forEach((el, i) => {
+    el.textContent = formatCount(recipe.ingredients[i].count);
+  });
+};
