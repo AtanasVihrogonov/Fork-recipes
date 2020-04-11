@@ -434,7 +434,7 @@ body {
   top: 0;
   left: 0;
   background-image: linear-gradient(to right bottom, #87cefa, #ffffff);
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .recipe__img {

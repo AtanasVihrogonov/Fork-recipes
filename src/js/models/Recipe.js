@@ -33,9 +33,9 @@ export default class Recipe {
 
   parseIngredients() {
     const unitsLong = ['tablespoons', 'tablespoon', 'ounces', 'ounce', 'teaspoons', 'teaspoon', 'cups', 'pounds'];
-    const unitsShort = ['tbsp', 'tbsp', 'oz', 'oz', 'tsp', 'tsp', 'cup', 'pound'];
-    //const inits = [...unitsShort, 'kg', 'g'];
-
+    let unitsShort = ['tbsp', 'tbsp', 'oz', 'oz', 'tsp', 'tsp', 'cup', 'pound'];
+    const units = [unitsShort, 'kg', 'g'];
+console.log('ffggg', units)
     const newIngredients = this.ingredients.map(el => {
       // 1. Uniform units
       let ingredient = el.toLowerCase();
@@ -45,13 +45,13 @@ export default class Recipe {
       });
 
       // 2. Remove parentheses
-      ingredient = ingredient.replace(/ *\([^)]*\) */g, ' ');
+      ingredient = ingredient.replace(/ *\([^)]*\) */g, " ");
 
       // 3. Parse ingredients into count, unit and ingredient
       // 3.1 If there is actually a unit in the string, and if so where it is located
-      const arrIng = ingredient.split('');
+      const arrIng = ingredient.split(' ');
       // 3.2 Find the index which the unit is located
-      const unitIndex = arrIng.findIndex(el2 => unitsShort.includes(el2)); // ==> The way to find the position of the unit,when we don't really know which unit we are looking for.
+      const unitIndex = arrIng.findIndex(el2 => units.includes(el2)); // ==> The way to find the position of the unit,when we don't really know which unit we are looking for.
 
       let objIng;
       if (unitIndex > -1) {
@@ -64,13 +64,13 @@ export default class Recipe {
         if (arrCount.length === 1) {
           count = eval(arrIng[0].replace('-', '+'));
         } else {
-          count = eval(arrIng.slice(0, unitIndex).joint('+'));
+          count = eval(arrIng.slice(0, unitIndex).join('+'));
         }
 
         objIng = {
           count: count,
           unit: arrIng[unitIndex],
-          ingredient: arrIng.slice(unitIndex + 1).joint(' ')
+          ingredient: arrIng.slice(unitIndex + 1).join(' ')
         };
 
       } else if (parseInt(arrIng[0], 10)){
@@ -78,7 +78,7 @@ export default class Recipe {
         objIng = {
           count: parseInt(arrIng[0], 10),
           unit: '',
-          ingredient: arrIng.slice(1).join('')
+          ingredient: arrIng.slice(1).join(' ')
         };
       } else if (unitIndex === -1) {
         // There is NO unit and NO number in 1st position
