@@ -23,8 +23,8 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "html-webpack-plugin": "^5.5.0",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.3.12",
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.13.1"
   },
   "dependencies": {
